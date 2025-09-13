@@ -1,0 +1,14 @@
+# macOS system files
+.DS_Store
+
+# Node modules (if ever used)
+node_modules/
+
+# Vercel local config
+.vercel/
+
+# Python cache (if ever used)
+__pycache__/
+
+# VS Code settings
+.vscode/
