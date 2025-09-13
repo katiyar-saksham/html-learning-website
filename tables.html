@@ -1,1 +1,933 @@
-/* ...existing code from html-learning-site/tables.html... */
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML tables with real examples and demos.">
+    <title>HTML Tables</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Tables</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>📊 HTML Tables: Your Data Organization Superpower!</h2>
+            <p>Welcome to the amazing world of HTML tables! 🌟 Think of tables as your digital spreadsheet - they help
+                you organize information in neat rows and columns, just like Excel or your school report card!</p>
+
+            <p><mark>Why tables matter:</mark> They're perfect for displaying data that has relationships - like
+                comparing prices, showing grades, or listing game statistics!</p>
+
+            <!-- ===== SECTION 1: UNDERSTANDING TABLES ===== -->
+            <section>
+                <h3>🤔 What Are Tables and When Do You Use Them?</h3>
+                <p>Tables are used when you have information that makes sense in rows and columns. Think of it like a
+                    grid where each piece of data has a specific place.</p>
+
+                <h4>📋 Perfect Table Use Cases:</h4>
+                <ul>
+                    <li>📚 <strong>Student Report Cards</strong> - Names, subjects, grades in organized rows</li>
+                    <li>🏏 <strong>Cricket Scoreboard</strong> - Players, runs, balls, strike rate</li>
+                    <li>🛒 <strong>Shopping Price Comparison</strong> - Products, stores, prices, ratings</li>
+                    <li>📅 <strong>Class Timetable</strong> - Time slots with different subjects each day</li>
+                    <li>💰 <strong>Bank Statement</strong> - Date, description, amount, balance</li>
+                    <li>🎮 <strong>Game Leaderboard</strong> - Player rank, name, score, level</li>
+                </ul>
+
+                <details>
+                    <summary>🎯 See These Examples Come to Life!</summary>
+
+                    <h5>📚 Student Report Card Example:</h5>
+                    <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Student Name&lt;/th&gt;
+    &lt;th&gt;Subject&lt;/th&gt;
+    &lt;th&gt;Marks&lt;/th&gt;
+    &lt;th&gt;Grade&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Arjun Sharma&lt;/td&gt;
+    &lt;td&gt;Math&lt;/td&gt;
+    &lt;td&gt;95&lt;/td&gt;
+    &lt;td&gt;A+&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Priya Singh&lt;/td&gt;
+    &lt;td&gt;Science&lt;/td&gt;
+    &lt;td&gt;88&lt;/td&gt;
+    &lt;td&gt;A&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <table border="1" cellpadding="5">
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>Arjun Sharma</td>
+                            <td>Math</td>
+                            <td>95</td>
+                            <td>A+</td>
+                        </tr>
+                        <tr>
+                            <td>Priya Singh</td>
+                            <td>Science</td>
+                            <td>88</td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <h5>🛒 Shopping Comparison Example:</h5>
+                    <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Product&lt;/th&gt;
+    &lt;th&gt;Store&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+    &lt;th&gt;Rating&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;iPhone 15&lt;/td&gt;
+    &lt;td&gt;Amazon&lt;/td&gt;
+    &lt;td&gt;₹79,999&lt;/td&gt;
+    &lt;td&gt;⭐⭐⭐⭐⭐&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;iPhone 15&lt;/td&gt;
+    &lt;td&gt;Flipkart&lt;/td&gt;
+    &lt;td&gt;₹81,499&lt;/td&gt;
+    &lt;td&gt;⭐⭐⭐⭐&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <table border="1" cellpadding="5">
+                        <tr>
+                            <th>Product</th>
+                            <th>Store</th>
+                            <th>Price</th>
+                            <th>Rating</th>
+                        </tr>
+                        <tr>
+                            <td>iPhone 15</td>
+                            <td>Amazon</td>
+                            <td>₹79,999</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>iPhone 15</td>
+                            <td>Flipkart</td>
+                            <td>₹81,499</td>
+                            <td>⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <h5>📅 Class Timetable Example:</h5>
+                    <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Time&lt;/th&gt;
+    &lt;th&gt;Monday&lt;/th&gt;
+    &lt;th&gt;Tuesday&lt;/th&gt;
+    &lt;th&gt;Wednesday&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;9:00 AM&lt;/td&gt;
+    &lt;td&gt;Math&lt;/td&gt;
+    &lt;td&gt;English&lt;/td&gt;
+    &lt;td&gt;Science&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;10:00 AM&lt;/td&gt;
+    &lt;td&gt;Science&lt;/td&gt;
+    &lt;td&gt;Math&lt;/td&gt;
+    &lt;td&gt;Hindi&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <table border="1" cellpadding="5">
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td>Math</td>
+                            <td>English</td>
+                            <td>Science</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td>Science</td>
+                            <td>Math</td>
+                            <td>Hindi</td>
+                        </tr>
+                    </table>
+                </details>
+            </section>
+
+            <!-- ===== SECTION 2: BASIC TABLE STRUCTURE ===== -->
+            <section>
+                <h3>🏗️ Step 1: Learn the Basic Table Building Blocks</h3>
+                <p>Every table is built using specific HTML tags. Let's learn them one by one, from most important to
+                    least important:</p>
+
+                <h4>🎯 Essential Table Tags (Must Know These!):</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Core Table Elements - Your Foundation</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>What It Does</th>
+                            <th>HTML Code Example</th>
+                            <th>Live Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;table&gt;</code></td>
+                            <td>Container for entire table</td>
+                            <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+                            <td><em>Creates the table structure</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tr&gt;</code></td>
+                            <td>Table row (horizontal line)</td>
+                            <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
+                            <td><em>One row of data</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;th&gt;</code></td>
+                            <td>Header cell (bold)</td>
+                            <td><code>&lt;th&gt;Name&lt;/th&gt;</code></td>
+                            <td><strong>Name</strong></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;td&gt;</code></td>
+                            <td>Data cell (normal)</td>
+                            <td><code>&lt;td&gt;John&lt;/td&gt;</code></td>
+                            <td>John</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>📖 Your First Table - Step by Step:</h4>
+                <p>Let's build a simple gaming leaderboard table together:</p>
+
+                <h5>Step 1: Create the table container</h5>
+                <pre><code>&lt;table border="1"&gt;
+&lt;/table&gt;</code></pre>
+                <p><strong>Output:</strong> <em>Empty table (you won't see anything yet)</em></p>
+
+                <h5>Step 2: Add your first row with headers</h5>
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Player&lt;/th&gt;
+    &lt;th&gt;Score&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <p><strong>Output:</strong></p>
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </table>
+
+                <h5>Step 3: Add data rows</h5>
+                <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Player&lt;/th&gt;
+    &lt;th&gt;Score&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alex&lt;/td&gt;
+    &lt;td&gt;2500&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sam&lt;/td&gt;
+    &lt;td&gt;1800&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                <p><strong>Complete Output:</strong></p>
+                <table border="1" cellpadding="5">
+                    <tr>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td>Alex</td>
+                        <td>2500</td>
+                    </tr>
+                    <tr>
+                        <td>Sam</td>
+                        <td>1800</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- ===== SECTION 3: PROFESSIONAL TABLE STRUCTURE ===== -->
+            <section>
+                <h3>🎓 Step 2: Professional Table Structure (Intermediate Level)</h3>
+                <p>Now let's learn how to make tables like the pros! These tags help organize your table better:</p>
+
+                <h4>🏆 Professional Table Tags:</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Advanced Table Elements</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Purpose</th>
+                            <th>HTML Code Example</th>
+                            <th>When to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;caption&gt;</code></td>
+                            <td>Table title/description</td>
+                            <td><code>&lt;caption&gt;Student Results&lt;/caption&gt;</code></td>
+                            <td>Always! Like a newspaper headline</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;thead&gt;</code></td>
+                            <td>Header section</td>
+                            <td><code>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;...&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</code>
+                            </td>
+                            <td>Groups all header rows</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tbody&gt;</code></td>
+                            <td>Main data section</td>
+                            <td><code>&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;</code>
+                            </td>
+                            <td>Contains all your data rows</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tfoot&gt;</code></td>
+                            <td>Footer section</td>
+                            <td><code>&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total: 500&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;</code>
+                            </td>
+                            <td>For totals, summaries</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🎯 Professional Table Example - Monthly Expenses:</h4>
+                <pre><code>&lt;table border="1" cellpadding="8"&gt;
+  &lt;caption&gt;My Monthly Budget Tracker&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Category&lt;/th&gt;
+      &lt;th&gt;Budgeted (₹)&lt;/th&gt;
+      &lt;th&gt;Spent (₹)&lt;/th&gt;
+      &lt;th&gt;Remaining (₹)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Food&lt;/td&gt;
+      &lt;td&gt;2000&lt;/td&gt;
+      &lt;td&gt;1800&lt;/td&gt;
+      &lt;td&gt;200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Entertainment&lt;/td&gt;
+      &lt;td&gt;1000&lt;/td&gt;
+      &lt;td&gt;1200&lt;/td&gt;
+      &lt;td&gt;-200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Shopping&lt;/td&gt;
+      &lt;td&gt;1500&lt;/td&gt;
+      &lt;td&gt;900&lt;/td&gt;
+      &lt;td&gt;600&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;4500&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;3900&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;600&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
+                <p><strong>👆 This professional code produces this beautiful output:</strong></p>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <caption><strong>My Monthly Budget Tracker</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Budgeted (₹)</th>
+                            <th>Spent (₹)</th>
+                            <th>Remaining (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Food</td>
+                            <td>2000</td>
+                            <td>1800</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Entertainment</td>
+                            <td>1000</td>
+                            <td>1200</td>
+                            <td>-200</td>
+                        </tr>
+                        <tr>
+                            <td>Shopping</td>
+                            <td>1500</td>
+                            <td>900</td>
+                            <td>600</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>4500</strong></td>
+                            <td><strong>3900</strong></td>
+                            <td><strong>600</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <!-- ===== SECTION 4: TABLE STYLING ===== -->
+            <section>
+                <h3>🎨 Step 3: Making Tables Look Beautiful (Styling Techniques)</h3>
+                <p>Now let's make your tables look professional! These attributes control how your table appears:</p>
+
+                <h4>✨ Table Styling Attributes (No CSS needed!):</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Table Styling Options</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>What It Does</th>
+                            <th>HTML Code</th>
+                            <th>Visual Effect</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>border="1"</code></td>
+                            <td>Adds borders around table</td>
+                            <td><code>&lt;table border="1"&gt;</code></td>
+                            <td>Creates grid lines (like graph paper!)</td>
+                        </tr>
+                        <tr>
+                            <td><code>cellpadding="8"</code></td>
+                            <td>Space inside each cell</td>
+                            <td><code>&lt;table cellpadding="8"&gt;</code></td>
+                            <td>Makes text not touch cell borders</td>
+                        </tr>
+                        <tr>
+                            <td><code>cellspacing="0"</code></td>
+                            <td>Space between cells</td>
+                            <td><code>&lt;table cellspacing="0"&gt;</code></td>
+                            <td>Removes gaps between cells</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🔍 See the Styling Differences:</h4>
+                <details>
+                    <summary>� Compare Different Table Styles!</summary>
+
+                    <h5>❌ No Styling (Plain HTML):</h5>
+                    <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Raj&lt;/td&gt;
+    &lt;td&gt;15&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <p><strong>Output:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Raj</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <h5>📋 With Border Only:</h5>
+                    <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Raj&lt;/td&gt;
+    &lt;td&gt;15&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <p><strong>Output:</strong></p>
+                    <table border="1">
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Raj</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <h5>🎯 Professional Style (Border + Padding):</h5>
+                    <pre><code>&lt;table border="1" cellpadding="8"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Raj&lt;/td&gt;
+    &lt;td&gt;15&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <p><strong>Output:</strong></p>
+                    <table border="1" cellpadding="8">
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Raj</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <h5>⭐ Complete Professional Style:</h5>
+                    <pre><code>&lt;table border="1" cellpadding="8" cellspacing="0"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Raj&lt;/td&gt;
+    &lt;td&gt;15&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <p><strong>Output:</strong></p>
+                    <table border="1" cellpadding="8" cellspacing="0">
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                        </tr>
+                        <tr>
+                            <td>Raj</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+
+                    <p><mark>See the difference?</mark> Each level looks more professional!</p>
+                </details>
+            </section>
+
+            <!-- ===== SECTION 5: ADVANCED/RARE TAGS ===== -->
+            <section>
+                <h3>🚀 Step 4: Advanced Table Features (Rare but Powerful!)</h3>
+                <p>These are special table tags that most people don't know about, but they can make your tables super
+                    professional:</p>
+
+                <h4>💎 Advanced Table Tags (For Experts!):</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Expert-Level Table Elements</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>What It Does</th>
+                            <th>HTML Example</th>
+                            <th>Use Case</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;colgroup&gt;</code></td>
+                            <td>Groups columns for styling</td>
+                            <td><code>&lt;colgroup&gt;&lt;col span="2"&gt;&lt;/colgroup&gt;</code></td>
+                            <td>Apply styles to multiple columns at once</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;col&gt;</code></td>
+                            <td>Defines column properties</td>
+                            <td><code>&lt;col span="2"&gt;</code></td>
+                            <td>Style specific columns</td>
+                        </tr>
+                        <tr>
+                            <td><code>colspan</code></td>
+                            <td>Cell spans multiple columns</td>
+                            <td><code>&lt;td colspan="3"&gt;Wide Cell&lt;/td&gt;</code></td>
+                            <td>Merge cells horizontally</td>
+                        </tr>
+                        <tr>
+                            <td><code>rowspan</code></td>
+                            <td>Cell spans multiple rows</td>
+                            <td><code>&lt;td rowspan="2"&gt;Tall Cell&lt;/td&gt;</code></td>
+                            <td>Merge cells vertically</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🎯 Advanced Example - Complex Timetable:</h4>
+                <pre><code>&lt;table border="1" cellpadding="5"&gt;
+  &lt;caption&gt;Class 10 - Weekly Schedule&lt;/caption&gt;
+  &lt;colgroup&gt;
+    &lt;col&gt; &lt;!-- Time column --&gt;
+    &lt;col span="5"&gt; &lt;!-- Day columns --&gt;
+  &lt;/colgroup&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Time&lt;/th&gt;
+      &lt;th&gt;Monday&lt;/th&gt;
+      &lt;th&gt;Tuesday&lt;/th&gt;
+      &lt;th&gt;Wednesday&lt;/th&gt;
+      &lt;th&gt;Thursday&lt;/th&gt;
+      &lt;th&gt;Friday&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9:00 AM&lt;/td&gt;
+      &lt;td&gt;Math&lt;/td&gt;
+      &lt;td&gt;English&lt;/td&gt;
+      &lt;td&gt;Science&lt;/td&gt;
+      &lt;td&gt;Math&lt;/td&gt;
+      &lt;td&gt;Hindi&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10:00 AM&lt;/td&gt;
+      &lt;td&gt;Science&lt;/td&gt;
+      &lt;td&gt;Math&lt;/td&gt;
+      &lt;td&gt;English&lt;/td&gt;
+      &lt;td&gt;Science&lt;/td&gt;
+      &lt;td&gt;Math&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11:00 AM&lt;/td&gt;
+      &lt;td colspan="5"&gt;BREAK TIME&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11:30 AM&lt;/td&gt;
+      &lt;td&gt;Hindi&lt;/td&gt;
+      &lt;td&gt;Science&lt;/td&gt;
+      &lt;td&gt;Math&lt;/td&gt;
+      &lt;td&gt;English&lt;/td&gt;
+      &lt;td&gt;Science&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                <p><strong>👆 This advanced code produces this complex output:</strong></p>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <caption><strong>Class 10 - Weekly Schedule</strong></caption>
+                    <colgroup>
+                        <col> <!-- Time column -->
+                        <col span="5"> <!-- Day columns -->
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td>Math</td>
+                            <td>English</td>
+                            <td>Science</td>
+                            <td>Math</td>
+                            <td>Hindi</td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td>Science</td>
+                            <td>Math</td>
+                            <td>English</td>
+                            <td>Science</td>
+                            <td>Math</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td colspan="5"><strong>BREAK
+                                    TIME</strong></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM</td>
+                            <td>Hindi</td>
+                            <td>Science</td>
+                            <td>Math</td>
+                            <td>English</td>
+                            <td>Science</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><mark>Amazing!</mark> Notice how <code>colspan="5"</code> makes the "BREAK TIME" cell span across all
+                    5 day columns!</p>
+            </section>
+
+            <!-- ===== SECTION 6: PRACTICE EXAMPLES ===== -->
+            <section>
+                <h3>🏅 Step 5: Practice with Real-World Examples</h3>
+                <p>Let's practice by creating some tables you might actually use:</p>
+
+                <details>
+                    <summary>📱 Example 1: Phone Comparison Table</summary>
+                    <h4>🎯 Goal: Compare different smartphones</h4>
+                    <pre><code>&lt;table border="1" cellpadding="6" cellspacing="0"&gt;
+  &lt;caption&gt;Best Phones Under ₹30,000&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Phone Model&lt;/th&gt;
+      &lt;th&gt;Price (₹)&lt;/th&gt;
+      &lt;th&gt;Camera (MP)&lt;/th&gt;
+      &lt;th&gt;Battery (mAh)&lt;/th&gt;
+      &lt;th&gt;Rating&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;OnePlus Nord&lt;/td&gt;
+      &lt;td&gt;27,999&lt;/td&gt;
+      &lt;td&gt;48 + 8 + 5 + 2&lt;/td&gt;
+      &lt;td&gt;4115&lt;/td&gt;
+      &lt;td&gt;⭐⭐⭐⭐⭐&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Xiaomi Mi 11X&lt;/td&gt;
+      &lt;td&gt;29,999&lt;/td&gt;
+      &lt;td&gt;48 + 8 + 5&lt;/td&gt;
+      &lt;td&gt;4520&lt;/td&gt;
+      &lt;td&gt;⭐⭐⭐⭐&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Samsung Galaxy A52&lt;/td&gt;
+      &lt;td&gt;26,499&lt;/td&gt;
+      &lt;td&gt;64 + 12 + 5 + 5&lt;/td&gt;
+      &lt;td&gt;4500&lt;/td&gt;
+      &lt;td&gt;⭐⭐⭐⭐&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan="5"&gt;&lt;em&gt;Prices may vary by retailer&lt;/em&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+
+                    <p><strong>👆 This creates:</strong></p>
+                    <table border="1" cellpadding="6" cellspacing="0">
+                        <caption><strong>Best Phones Under ₹30,000</strong></caption>
+                        <thead>
+                            <tr>
+                                <th>Phone Model</th>
+                                <th>Price (₹)</th>
+                                <th>Camera (MP)</th>
+                                <th>Battery (mAh)</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>OnePlus Nord</td>
+                                <td>27,999</td>
+                                <td>48 + 8 + 5 + 2</td>
+                                <td>4115</td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td>Xiaomi Mi 11X</td>
+                                <td>29,999</td>
+                                <td>48 + 8 + 5</td>
+                                <td>4520</td>
+                                <td>⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td>Samsung Galaxy A52</td>
+                                <td>26,499</td>
+                                <td>64 + 12 + 5 + 5</td>
+                                <td>4500</td>
+                                <td>⭐⭐⭐⭐</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5"><em>Prices may vary by retailer</em></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </details>
+
+                <details>
+                    <summary>🎮 Example 2: Gaming Tournament Results</summary>
+                    <h4>🎯 Goal: Show tournament standings with statistics</h4>
+                    <pre><code>&lt;table border="1" cellpadding="8" cellspacing="0"&gt;
+  &lt;caption&gt;PUBG Mobile Tournament - Final Results&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Rank&lt;/th&gt;
+      &lt;th&gt;Team Name&lt;/th&gt;
+      &lt;th&gt;Kills&lt;/th&gt;
+      &lt;th&gt;Wins&lt;/th&gt;
+      &lt;th&gt;Total Points&lt;/th&gt;
+      &lt;th&gt;Prize (₹)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;🥇 1st&lt;/td&gt;
+      &lt;td&gt;Team Alpha&lt;/td&gt;
+      &lt;td&gt;127&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;287&lt;/td&gt;
+      &lt;td&gt;50,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;🥈 2nd&lt;/td&gt;
+      &lt;td&gt;Gaming Legends&lt;/td&gt;
+      &lt;td&gt;115&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;245&lt;/td&gt;
+      &lt;td&gt;25,000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;🥉 3rd&lt;/td&gt;
+      &lt;td&gt;Pro Players&lt;/td&gt;
+      &lt;td&gt;98&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;218&lt;/td&gt;
+      &lt;td&gt;10,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+                    <p><strong>👆 This creates:</strong></p>
+                    <table border="1" cellpadding="8" cellspacing="0">
+                        <caption><strong>PUBG Mobile Tournament - Final Results</strong></caption>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Team Name</th>
+                                <th>Kills</th>
+                                <th>Wins</th>
+                                <th>Total Points</th>
+                                <th>Prize (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>🥇 1st</td>
+                                <td>Team Alpha</td>
+                                <td>127</td>
+                                <td>8</td>
+                                <td>287</td>
+                                <td>50,000</td>
+                            </tr>
+                            <tr>
+                                <td>🥈 2nd</td>
+                                <td>Gaming Legends</td>
+                                <td>115</td>
+                                <td>6</td>
+                                <td>245</td>
+                                <td>25,000</td>
+                            </tr>
+                            <tr>
+                                <td>🥉 3rd</td>
+                                <td>Pro Players</td>
+                                <td>98</td>
+                                <td>5</td>
+                                <td>218</td>
+                                <td>10,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </details>
+            </section>
+
+            <aside>
+                <h4>🎯 Tables Mastery Checklist</h4>
+                <p><strong>✅ Essential Skills (Must Learn):</strong></p>
+                <ul>
+                    <li>🔹 <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>,
+                        <code>&lt;td&gt;</code> - Basic structure
+                    </li>
+                    <li>🔹 <code>border="1"</code> and <code>cellpadding</code> - Basic styling</li>
+                    <li>🔹 <code>&lt;caption&gt;</code> - Always give your tables titles!</li>
+                    <li>🔹 <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code> -
+                        Professional structure</li>
+                </ul>
+
+                <p><strong>⭐ Advanced Skills (Level Up):</strong></p>
+                <ul>
+                    <li>🔸 <code>&lt;colgroup&gt;</code> and <code>&lt;col&gt;</code> - Column grouping</li>
+                    <li>🔸 <code>colspan</code> and <code>rowspan</code> - Cell merging</li>
+                    <li>🔸 Complex data organization with footers and summaries</li>
+                </ul>
+
+                <p><strong>🎯 Pro Tips for Table Success:</strong></p>
+                <ul>
+                    <li>✨ <strong>Always use borders</strong> - They make data easier to read</li>
+                    <li>✨ <strong>Add padding</strong> - Gives breathing room to your data</li>
+                    <li>✨ <strong>Use clear headers</strong> - Make column names obvious</li>
+                    <li>✨ <strong>Keep data consistent</strong> - Same format in each column</li>
+                    <li>✨ <strong>Only use tables for data</strong> - Not for page layout!</li>
+                </ul>
+
+                <p><mark>Remember:</mark> Tables are perfect for data that makes sense in rows and columns - like
+                    spreadsheets, scoreboards, or comparison charts! 📊</p>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <p>Contact: <a href="mailto:your@email.com">your@email.com</a></p>
+        <p><small>&copy; 2025 HTML Learning Site.</small></p>
+    </footer>
+</body>
+
+</html>
