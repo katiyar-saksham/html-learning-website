@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about HTML lists with real examples and demos.">
+    <title>HTML Lists</title>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Lists</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="headings.html">Headings</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="tables.html">Tables</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2>📝 HTML Lists: Your Digital Organization Tool!</h2>
+            <p>Welcome to the world of HTML lists! 🌟 Think of lists as your digital organizer - they help you present
+                information in a clear, structured way that's easy to read and understand!</p>
+
+            <p><mark>Why lists matter:</mark> They're perfect for organizing anything - shopping lists, step-by-step
+                guides, menus, features, and more! They make content scannable and user-friendly.</p>
+
+            <!-- ===== SECTION 1: UNDERSTANDING LISTS ===== -->
+            <section>
+                <h3>🤔 What Are Lists and When Do You Use Them?</h3>
+                <p>Lists help you organize related items in a structured way. Think of them as your digital way to
+                    create bullet points, numbered steps, or definitions!</p>
+
+                <h4>📋 Perfect List Use Cases:</h4>
+                <ul>
+                    <li>🛒 <strong>Shopping Lists</strong> - Items you need to buy</li>
+                    <li>📝 <strong>To-Do Lists</strong> - Tasks to complete</li>
+                    <li>🔢 <strong>Step-by-Step Instructions</strong> - Recipes, tutorials, guides</li>
+                    <li>🍕 <strong>Restaurant Menus</strong> - Food items and prices</li>
+                    <li>🏆 <strong>Feature Lists</strong> - Product benefits and features</li>
+                    <li>📚 <strong>Glossaries</strong> - Terms and their definitions</li>
+                    <li>🎮 <strong>Game Features</strong> - What's included in a game</li>
+                    <li>📱 <strong>App Features</strong> - What your app can do</li>
+                </ul>
+
+                <details>
+                    <summary>🎯 See These Examples in Real Life!</summary>
+
+                    <h5>🛒 Shopping List Example:</h5>
+                    <pre><code>&lt;h3&gt;My Shopping List&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;🥛 Milk (2 liters)&lt;/li&gt;
+  &lt;li&gt;🍞 Bread (whole wheat)&lt;/li&gt;
+  &lt;li&gt;🍎 Apples (1 kg)&lt;/li&gt;
+  &lt;li&gt;🧀 Cheese (cheddar)&lt;/li&gt;
+  &lt;li&gt;🍝 Pasta (500g)&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>My Shopping List</h4>
+                    <ul>
+                        <li>🥛 Milk (2 liters)</li>
+                        <li>🍞 Bread (whole wheat)</li>
+                        <li>🍎 Apples (1 kg)</li>
+                        <li>🧀 Cheese (cheddar)</li>
+                        <li>🍝 Pasta (500g)</li>
+                    </ul>
+
+                    <hr>
+
+                    <h5>🍳 Cooking Recipe Example:</h5>
+                    <pre><code>&lt;h3&gt;How to Make Perfect Tea&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Boil 2 cups of water in a kettle&lt;/li&gt;
+  &lt;li&gt;Add 2 tea bags to a teapot&lt;/li&gt;
+  &lt;li&gt;Pour hot water over the tea bags&lt;/li&gt;
+  &lt;li&gt;Let it steep for 3-5 minutes&lt;/li&gt;
+  &lt;li&gt;Add sugar and milk to taste&lt;/li&gt;
+  &lt;li&gt;Serve hot and enjoy! ☕&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>How to Make Perfect Tea</h4>
+                    <ol>
+                        <li>Boil 2 cups of water in a kettle</li>
+                        <li>Add 2 tea bags to a teapot</li>
+                        <li>Pour hot water over the tea bags</li>
+                        <li>Let it steep for 3-5 minutes</li>
+                        <li>Add sugar and milk to taste</li>
+                        <li>Serve hot and enjoy! ☕</li>
+                    </ol>
+
+                    <hr>
+
+                    <h5>📱 App Features Example:</h5>
+                    <pre><code>&lt;h3&gt;WhatsApp Features&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;💬 Instant Messaging&lt;/li&gt;
+  &lt;li&gt;📞 Voice Calls&lt;/li&gt;
+  &lt;li&gt;📹 Video Calls&lt;/li&gt;
+  &lt;li&gt;📷 Photo Sharing&lt;/li&gt;
+  &lt;li&gt;🎵 Audio Messages&lt;/li&gt;
+  &lt;li&gt;📍 Location Sharing&lt;/li&gt;
+  &lt;li&gt;👥 Group Chats&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>WhatsApp Features</h4>
+                    <ul>
+                        <li>💬 Instant Messaging</li>
+                        <li>📞 Voice Calls</li>
+                        <li>📹 Video Calls</li>
+                        <li>📷 Photo Sharing</li>
+                        <li>🎵 Audio Messages</li>
+                        <li>📍 Location Sharing</li>
+                        <li>👥 Group Chats</li>
+                    </ul>
+                </details>
+            </section>
+
+            <!-- ===== SECTION 2: BASIC LIST TYPES ===== -->
+            <section>
+                <h3>🏗️ Step 1: Learn the 3 Main List Types (Essential Knowledge)</h3>
+                <p>HTML gives you 3 main types of lists. Each one is perfect for different situations:</p>
+
+                <h4>🎯 Essential List Types (Must Know These!):</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Core List Types - Your Foundation</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>List Type</th>
+                            <th>HTML Tag</th>
+                            <th>When to Use</th>
+                            <th>Real Example</th>
+                            <th>Live Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Unordered List</strong></td>
+                            <td><code>&lt;ul&gt;</code></td>
+                            <td>Order doesn't matter</td>
+                            <td>Shopping list, features</td>
+                            <td>
+                                <ul>
+                                    <li>Pizza</li>
+                                    <li>Burger</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ordered List</strong></td>
+                            <td><code>&lt;ol&gt;</code></td>
+                            <td>Order matters (steps)</td>
+                            <td>Recipes, instructions</td>
+                            <td>
+                                <ol>
+                                    <li>Mix</li>
+                                    <li>Bake</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Description List</strong></td>
+                            <td><code>&lt;dl&gt;</code></td>
+                            <td>Terms + definitions</td>
+                            <td>Glossary, FAQs</td>
+                            <td>
+                                <dl>
+                                    <dt>HTML</dt>
+                                    <dd>Markup Language</dd>
+                                </dl>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>📖 Your First List - Step by Step:</h4>
+                <p>Let's build a simple gaming wishlist together:</p>
+
+                <h5>Step 1: Start with unordered list</h5>
+                <pre><code>&lt;ul&gt;
+&lt;/ul&gt;</code></pre>
+                <p><strong>Output:</strong> <em>Empty list (you won't see anything yet)</em></p>
+
+                <h5>Step 2: Add list items</h5>
+                <pre><code>&lt;ul&gt;
+  &lt;li&gt;FIFA 24&lt;/li&gt;
+  &lt;li&gt;Call of Duty&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p><strong>Output:</strong></p>
+                <ul>
+                    <li>FIFA 24</li>
+                    <li>Call of Duty</li>
+                </ul>
+
+                <h5>Step 3: Make it more detailed</h5>
+                <pre><code>&lt;h3&gt;🎮 My Gaming Wishlist&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;🏈 FIFA 24 - ₹3,999&lt;/li&gt;
+  &lt;li&gt;🔫 Call of Duty: Modern Warfare - ₹4,499&lt;/li&gt;
+  &lt;li&gt;🏎️ Forza Horizon 5 - ₹3,499&lt;/li&gt;
+  &lt;li&gt;⚔️ Elden Ring - ₹2,999&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p><strong>Complete Output:</strong></p>
+                <h4>🎮 My Gaming Wishlist</h4>
+                <ul>
+                    <li>🏈 FIFA 24 - ₹3,999</li>
+                    <li>🔫 Call of Duty: Modern Warfare - ₹4,499</li>
+                    <li>🏎️ Forza Horizon 5 - ₹3,499</li>
+                    <li>⚔️ Elden Ring - ₹2,999</li>
+                </ul>
+            </section>
+
+            <!-- ===== SECTION 3: ORDERED LISTS ===== -->
+            <section>
+                <h3>🔢 Step 2: Mastering Ordered Lists (When Order Matters)</h3>
+                <p>Ordered lists are perfect when sequence is important - like recipes, tutorials, or ranking!</p>
+
+                <h4>🏆 Ordered List Features:</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Ordered List Customization</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>What It Does</th>
+                            <th>HTML Code Example</th>
+                            <th>Live Output</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>type="1"</code></td>
+                            <td>Numbers (default)</td>
+                            <td><code>&lt;ol type="1"&gt;</code></td>
+                            <td>
+                                <ol type="1">
+                                    <li>First</li>
+                                    <li>Second</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>type="A"</code></td>
+                            <td>Uppercase letters</td>
+                            <td><code>&lt;ol type="A"&gt;</code></td>
+                            <td>
+                                <ol type="A">
+                                    <li>First</li>
+                                    <li>Second</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>type="a"</code></td>
+                            <td>Lowercase letters</td>
+                            <td><code>&lt;ol type="a"&gt;</code></td>
+                            <td>
+                                <ol type="a">
+                                    <li>First</li>
+                                    <li>Second</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>type="I"</code></td>
+                            <td>Roman numerals (upper)</td>
+                            <td><code>&lt;ol type="I"&gt;</code></td>
+                            <td>
+                                <ol type="I">
+                                    <li>First</li>
+                                    <li>Second</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>type="i"</code></td>
+                            <td>Roman numerals (lower)</td>
+                            <td><code>&lt;ol type="i"&gt;</code></td>
+                            <td>
+                                <ol type="i">
+                                    <li>First</li>
+                                    <li>Second</li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>start="5"</code></td>
+                            <td>Start from number 5</td>
+                            <td><code>&lt;ol start="5"&gt;</code></td>
+                            <td>
+                                <ol start="5">
+                                    <li>Fifth</li>
+                                    <li>Sixth</li>
+                                </ol>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🎯 Practical Ordered List Examples:</h4>
+                <details>
+                    <summary>📱 How to Install an App on Android</summary>
+
+                    <pre><code>&lt;h3&gt;📱 How to Install WhatsApp&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Open Google Play Store on your phone&lt;/li&gt;
+  &lt;li&gt;Tap the search bar at the top&lt;/li&gt;
+  &lt;li&gt;Type "WhatsApp" and hit search&lt;/li&gt;
+  &lt;li&gt;Tap on "WhatsApp Messenger" from results&lt;/li&gt;
+  &lt;li&gt;Tap the green "Install" button&lt;/li&gt;
+  &lt;li&gt;Wait for download and installation&lt;/li&gt;
+  &lt;li&gt;Tap "Open" to start using WhatsApp! 🎉&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>📱 How to Install WhatsApp</h4>
+                    <ol>
+                        <li>Open Google Play Store on your phone</li>
+                        <li>Tap the search bar at the top</li>
+                        <li>Type "WhatsApp" and hit search</li>
+                        <li>Tap on "WhatsApp Messenger" from results</li>
+                        <li>Tap the green "Install" button</li>
+                        <li>Wait for download and installation</li>
+                        <li>Tap "Open" to start using WhatsApp! 🎉</li>
+                    </ol>
+
+                    <hr>
+
+                    <h4>🏆 Top 5 Most Popular Video Games (2024)</h4>
+                    <pre><code>&lt;h3&gt;🏆 Top 5 Games This Year&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;🔫 Fortnite - 400M+ players&lt;/li&gt;
+  &lt;li&gt;⚡ PUBG Mobile - 350M+ players&lt;/li&gt;
+  &lt;li&gt;🧱 Minecraft - 300M+ players&lt;/li&gt;
+  &lt;li&gt;🎮 Roblox - 250M+ players&lt;/li&gt;
+  &lt;li&gt;⚔️ League of Legends - 180M+ players&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>🏆 Top 5 Games This Year</h4>
+                    <ol>
+                        <li>🔫 Fortnite - 400M+ players</li>
+                        <li>⚡ PUBG Mobile - 350M+ players</li>
+                        <li>🧱 Minecraft - 300M+ players</li>
+                        <li>🎮 Roblox - 250M+ players</li>
+                        <li>⚔️ League of Legends - 180M+ players</li>
+                    </ol>
+                </details>
+            </section>
+
+            <!-- ===== SECTION 4: DESCRIPTION LISTS ===== -->
+            <section>
+                <h3>📚 Step 3: Description Lists (For Definitions & FAQs)</h3>
+                <p>Description lists are perfect for glossaries, FAQs, and any content where you need to pair terms with
+                    their explanations!</p>
+
+                <h4>💎 Description List Elements:</h4>
+                <table border="1" cellpadding="8">
+                    <caption><strong>Description List Components</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Purpose</th>
+                            <th>HTML Code</th>
+                            <th>Example Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;dl&gt;</code></td>
+                            <td>Description list container</td>
+                            <td><code>&lt;dl&gt;...&lt;/dl&gt;</code></td>
+                            <td>Wraps the entire definition list</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dt&gt;</code></td>
+                            <td>Definition term (the word)</td>
+                            <td><code>&lt;dt&gt;HTML&lt;/dt&gt;</code></td>
+                            <td>The term you're defining</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dd&gt;</code></td>
+                            <td>Definition description (explanation)</td>
+                            <td><code>&lt;dd&gt;Markup language&lt;/dd&gt;</code></td>
+                            <td>The explanation of the term</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>🎯 Practical Description List Examples:</h4>
+                <details>
+                    <summary>🎮 Gaming Terms Glossary</summary>
+
+                    <pre><code>&lt;h3&gt;🎮 Gaming Glossary for Beginners&lt;/h3&gt;
+&lt;dl&gt;
+  &lt;dt&gt;FPS&lt;/dt&gt;
+  &lt;dd&gt;First Person Shooter - Games where you see through character's eyes&lt;/dd&gt;
+  
+  &lt;dt&gt;RPG&lt;/dt&gt;
+  &lt;dd&gt;Role Playing Game - You play as a character with stats and skills&lt;/dd&gt;
+  
+  &lt;dt&gt;NPC&lt;/dt&gt;
+  &lt;dd&gt;Non-Player Character - Computer-controlled characters in games&lt;/dd&gt;
+  
+  &lt;dt&gt;Noob&lt;/dt&gt;
+  &lt;dd&gt;New player who is still learning the game&lt;/dd&gt;
+  
+  &lt;dt&gt;Lag&lt;/dt&gt;
+  &lt;dd&gt;Delay between your action and game response (usually due to internet)&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>🎮 Gaming Glossary for Beginners</h4>
+                    <dl>
+                        <dt><strong>FPS</strong></dt>
+                        <dd>First Person Shooter - Games where you see through character's eyes</dd>
+
+                        <dt><strong>RPG</strong></dt>
+                        <dd>Role Playing Game - You play as a character with stats and skills</dd>
+
+                        <dt><strong>NPC</strong></dt>
+                        <dd>Non-Player Character - Computer-controlled characters in games</dd>
+
+                        <dt><strong>Noob</strong></dt>
+                        <dd>New player who is still learning the game</dd>
+
+                        <dt><strong>Lag</strong></dt>
+                        <dd>Delay between your action and game response (usually due to internet)</dd>
+                    </dl>
+
+                    <hr>
+
+                    <h4>📱 Social Media FAQ</h4>
+                    <pre><code>&lt;h3&gt;📱 Instagram FAQ&lt;/h3&gt;
+&lt;dl&gt;
+  &lt;dt&gt;What is a Story?&lt;/dt&gt;
+  &lt;dd&gt;Photos/videos that disappear after 24 hours&lt;/dd&gt;
+  
+  &lt;dt&gt;What does DM mean?&lt;/dt&gt;
+  &lt;dd&gt;Direct Message - private messages between users&lt;/dd&gt;
+  
+  &lt;dt&gt;How do I go viral?&lt;/dt&gt;
+  &lt;dd&gt;Create engaging content, use trending hashtags, post consistently&lt;/dd&gt;
+  
+  &lt;dt&gt;What is a hashtag?&lt;/dt&gt;
+  &lt;dd&gt;Keywords with # symbol to categorize and discover content&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>📱 Instagram FAQ</h4>
+                    <dl>
+                        <dt><strong>What is a Story?</strong></dt>
+                        <dd>Photos/videos that disappear after 24 hours</dd>
+
+                        <dt><strong>What does DM mean?</strong></dt>
+                        <dd>Direct Message - private messages between users</dd>
+
+                        <dt><strong>How do I go viral?</strong></dt>
+                        <dd>Create engaging content, use trending hashtags, post consistently</dd>
+
+                        <dt><strong>What is a hashtag?</strong></dt>
+                        <dd>Keywords with # symbol to categorize and discover content</dd>
+                    </dl>
+                </details>
+            </section>
+
+            <!-- ===== SECTION 5: NESTED LISTS ===== -->
+            <section>
+                <h3>🌲 Step 4: Advanced - Nested Lists (Lists Inside Lists)</h3>
+                <p>Sometimes you need to organize information in multiple levels - like a family tree or detailed plans!
+                </p>
+
+                <h4>🎯 Nested List Examples:</h4>
+                <details>
+                    <summary>🏫 School Subject Organization</summary>
+
+                    <pre><code>&lt;h3&gt;📚 My Class 10 Subjects&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;📊 Mathematics
+    &lt;ul&gt;
+      &lt;li&gt;Algebra&lt;/li&gt;
+      &lt;li&gt;Geometry&lt;/li&gt;
+      &lt;li&gt;Trigonometry&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;🔬 Science
+    &lt;ul&gt;
+      &lt;li&gt;Physics&lt;/li&gt;
+      &lt;li&gt;Chemistry&lt;/li&gt;
+      &lt;li&gt;Biology&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;🗣️ Languages
+    &lt;ul&gt;
+      &lt;li&gt;English&lt;/li&gt;
+      &lt;li&gt;Hindi&lt;/li&gt;
+      &lt;li&gt;Sanskrit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>📚 My Class 10 Subjects</h4>
+                    <ul>
+                        <li>📊 Mathematics
+                            <ul>
+                                <li>Algebra</li>
+                                <li>Geometry</li>
+                                <li>Trigonometry</li>
+                            </ul>
+                        </li>
+                        <li>🔬 Science
+                            <ul>
+                                <li>Physics</li>
+                                <li>Chemistry</li>
+                                <li>Biology</li>
+                            </ul>
+                        </li>
+                        <li>🗣️ Languages
+                            <ul>
+                                <li>English</li>
+                                <li>Hindi</li>
+                                <li>Sanskrit</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <h4>🎯 Project Planning Example</h4>
+                    <pre><code>&lt;h3&gt;📱 App Development Plan&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Planning Phase
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Define app purpose&lt;/li&gt;
+      &lt;li&gt;Research target audience&lt;/li&gt;
+      &lt;li&gt;Create wireframes&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Design Phase
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Design user interface&lt;/li&gt;
+      &lt;li&gt;Choose color scheme&lt;/li&gt;
+      &lt;li&gt;Create app icons&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Development Phase
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Set up development environment&lt;/li&gt;
+      &lt;li&gt;Code core features&lt;/li&gt;
+      &lt;li&gt;Test functionality&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <p><strong>👆 This code produces this output:</strong></p>
+                    <h4>📱 App Development Plan</h4>
+                    <ol>
+                        <li>Planning Phase
+                            <ol type="a">
+                                <li>Define app purpose</li>
+                                <li>Research target audience</li>
+                                <li>Create wireframes</li>
+                            </ol>
+                        </li>
+                        <li>Design Phase
+                            <ol type="a">
+                                <li>Design user interface</li>
+                                <li>Choose color scheme</li>
+                                <li>Create app icons</li>
+                            </ol>
+                        </li>
+                        <li>Development Phase
+                            <ol type="a">
+                                <li>Set up development environment</li>
+                                <li>Code core features</li>
+                                <li>Test functionality</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </details>
+            </section>
+
+            <!-- ===== SECTION 6: PRACTICE EXAMPLES ===== -->
+            <section>
+                <h3>🏅 Step 5: Practice with Real-World Examples</h3>
+                <p>Let's practice by creating some lists you might actually use:</p>
+
+                <details>
+                    <summary>🍕 Restaurant Menu Example</summary>
+                    <h4>🎯 Goal: Create a restaurant menu with categories</h4>
+                    <pre><code>&lt;h3&gt;🍕 Mario's Pizza - Menu&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;🍕 Pizzas
+    &lt;ul&gt;
+      &lt;li&gt;Margherita Pizza - ₹299&lt;/li&gt;
+      &lt;li&gt;Pepperoni Pizza - ₹399&lt;/li&gt;
+      &lt;li&gt;Veggie Supreme - ₹449&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;🍔 Burgers
+    &lt;ul&gt;
+      &lt;li&gt;Classic Beef Burger - ₹249&lt;/li&gt;
+      &lt;li&gt;Chicken Deluxe - ₹299&lt;/li&gt;
+      &lt;li&gt;Veggie Burger - ₹199&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;🥤 Beverages
+    &lt;ul&gt;
+      &lt;li&gt;Coke - ₹49&lt;/li&gt;
+      &lt;li&gt;Fresh Juice - ₹79&lt;/li&gt;
+      &lt;li&gt;Coffee - ₹59&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                    <p><strong>👆 This creates:</strong></p>
+                    <h4>🍕 Mario's Pizza - Menu</h4>
+                    <ul>
+                        <li>🍕 Pizzas
+                            <ul>
+                                <li>Margherita Pizza - ₹299</li>
+                                <li>Pepperoni Pizza - ₹399</li>
+                                <li>Veggie Supreme - ₹449</li>
+                            </ul>
+                        </li>
+                        <li>🍔 Burgers
+                            <ul>
+                                <li>Classic Beef Burger - ₹249</li>
+                                <li>Chicken Deluxe - ₹299</li>
+                                <li>Veggie Burger - ₹199</li>
+                            </ul>
+                        </li>
+                        <li>🥤 Beverages
+                            <ul>
+                                <li>Coke - ₹49</li>
+                                <li>Fresh Juice - ₹79</li>
+                                <li>Coffee - ₹59</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary>🎯 YouTube Channel Growth Guide</summary>
+                    <h4>🎯 Goal: Step-by-step guide with sub-steps</h4>
+                    <pre><code>&lt;h3&gt;🎥 How to Grow Your YouTube Channel&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;📝 Content Planning
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Choose your niche (gaming, education, entertainment)&lt;/li&gt;
+      &lt;li&gt;Research popular topics in your niche&lt;/li&gt;
+      &lt;li&gt;Create a content calendar&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;🎬 Video Creation
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Invest in decent equipment (camera, mic)&lt;/li&gt;
+      &lt;li&gt;Create engaging thumbnails&lt;/li&gt;
+      &lt;li&gt;Write catchy titles&lt;/li&gt;
+      &lt;li&gt;Edit videos professionally&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;📊 Growth Strategy
+    &lt;ol type="a"&gt;
+      &lt;li&gt;Post consistently (2-3 times per week)&lt;/li&gt;
+      &lt;li&gt;Use relevant hashtags and keywords&lt;/li&gt;
+      &lt;li&gt;Engage with your audience in comments&lt;/li&gt;
+      &lt;li&gt;Collaborate with other YouTubers&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+                    <p><strong>👆 This creates:</strong></p>
+                    <h4>🎥 How to Grow Your YouTube Channel</h4>
+                    <ol>
+                        <li>📝 Content Planning
+                            <ol type="a">
+                                <li>Choose your niche (gaming, education, entertainment)</li>
+                                <li>Research popular topics in your niche</li>
+                                <li>Create a content calendar</li>
+                            </ol>
+                        </li>
+                        <li>🎬 Video Creation
+                            <ol type="a">
+                                <li>Invest in decent equipment (camera, mic)</li>
+                                <li>Create engaging thumbnails</li>
+                                <li>Write catchy titles</li>
+                                <li>Edit videos professionally</li>
+                            </ol>
+                        </li>
+                        <li>📊 Growth Strategy
+                            <ol type="a">
+                                <li>Post consistently (2-3 times per week)</li>
+                                <li>Use relevant hashtags and keywords</li>
+                                <li>Engage with your audience in comments</li>
+                                <li>Collaborate with other YouTubers</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </details>
+            </section>
+
+            <aside>
+                <h4>🎯 Lists Mastery Checklist</h4>
+                <p><strong>✅ Essential Skills (Must Learn):</strong></p>
+                <ul>
+                    <li>🔹 <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> - Basic unordered lists</li>
+                    <li>🔹 <code>&lt;ol&gt;</code> and <code>&lt;li&gt;</code> - Basic ordered lists</li>
+                    <li>🔹 <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code> - Definition lists
+                    </li>
+                    <li>🔹 When to use each type of list appropriately</li>
+                </ul>
+
+                <p><strong>⭐ Advanced Skills (Level Up):</strong></p>
+                <ul>
+                    <li>🔸 <code>type="A"</code>, <code>type="I"</code> - Different numbering styles</li>
+                    <li>🔸 <code>start="5"</code> - Custom starting numbers</li>
+                    <li>🔸 Nested lists (lists inside lists)</li>
+                    <li>🔸 Complex multi-level organization</li>
+                </ul>
+
+                <p><strong>🎯 Pro Tips for List Success:</strong></p>
+                <ul>
+                    <li>✨ <strong>Choose the right list type</strong> - Order matters? Use <code>&lt;ol&gt;</code></li>
+                    <li>✨ <strong>Keep items parallel</strong> - Same structure and style</li>
+                    <li>✨ <strong>Use emojis</strong> - Makes lists more engaging and visual</li>
+                    <li>✨ <strong>Don't overdo nesting</strong> - Maximum 3 levels for readability</li>
+                    <li>✨ <strong>Be consistent</strong> - Same format throughout the list</li>
+                </ul>
+
+                <p><mark>Remember:</mark> Lists are one of the most useful HTML elements. They make information
+                    scannable and organized - perfect for menus, steps, features, and more! 📝</p>
+            </aside>
+        </article>
+    </main>
+    <footer>
+        <p>Contact: <a href="mailto:your@email.com">your@email.com</a></p>
+        <p><small>&copy; 2025 HTML Learning Site.</small></p>
+    </footer>
+</body>
+
+</html>
